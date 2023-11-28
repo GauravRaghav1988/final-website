@@ -37,7 +37,7 @@
         {% if user.is_authenticated %} 
         
         <li class="nav-item"><a href='/account/'
-            class="- btn btn-primary rounded ml-4"><span>username : {{request.user.username | upper}} </span></a></li>
+            class="- btn btn-primary rounded ml-4" style="background-color:white;font-family:Verdana, Geneva, Tahoma, sans-serif;border-color:blue;border-width:2px ;color: black;font-size:small;margin: 0 9px"><span>User Name : {{request.user.username | upper}} </span></a></li>
           
 
                     <li class="nav-item">
@@ -78,13 +78,13 @@
                      
 
                     
-                    <li class="nav-item">
+                    <li class="nav-item" style="color: orangered;">
                         <a class="nav-link" href="/quiz/"><strong>Play Quiz</strong></a>
                     </li>
                   
 
                             
-                    <li class="nav-item" style="background-color:cyan;font-family:'Times New Roman', Times, serif;">
+                    <li class="nav-item" style="background-color: red;font-family:'Times New Roman', Times, serif;">
                         <a class="nav-link" href="/logout/"><strong>Logout</strong></a>
                     </li>
                        
@@ -155,7 +155,7 @@
     <!-- End of page navibation -->
 
     <!-- Page Header -->
-    <header class="header" style ="background-color:#557677;" ,id="home"> 
+    <header class="header" style ="background-color:darkslategrey ;" ,id="home"> 
         <div class="container">
             <div class="infos">
                 <h6 class="subtitle" style="color: white ; font:bold; font-size:xx-large;">Hello,I'm</h6>
@@ -176,8 +176,8 @@
                         {% comment %} <p class="new">Software Professional</p>  {% endcomment %}
                     
                   {% else %}
-                  <a class="btn btn-primary rounded" style="color: white; background-color:blue;"  href='/login/'>Login</a>
-                  <a href='/registration/' class="btn btn-dark rounded">Register Here</a>
+                  <a class="btn btn-primary rounded" style="color:white; font-family:monospace;"  href='/login/'>Login</a>
+                  <a href='/registration/' class="btn btn-dark rounded" style="border-color: chartreuse;">Register Here</a>
                     {%endif%}
 
                     {% for message in messages %}
@@ -460,7 +460,7 @@
          </section>
     
     <!-- End of testmonial section -->
-   
+    {% if user.is_authenticated %} 
     <!-- Blog Section -->
     <section id="blog" class="section">
         <div class="container text-center">
@@ -517,7 +517,7 @@
             </div>
         </div>
     </section> 
-
+    {% endif%}
     <!-- Hire me section -->
     {% comment %} <section class="bg-gray p-0 section">
         <div class="container">

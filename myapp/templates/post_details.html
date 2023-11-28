@@ -1,4 +1,4 @@
-<!-- templates/blog/post_detail.html -->
+{% comment %} <!-- templates/blog/post_detail.html -->
 
 
 {% block content %}
@@ -7,4 +7,4 @@
   <p>Author: {{ post.user_name }}</p>
   <p>{{ post.content }}</p>
   <a href="{% url 'post_list' %}">Back to post list</a>
-{% endblock %}
+{% endblock %} {% endcomment %}

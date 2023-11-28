@@ -29,7 +29,7 @@ class addQuestionform(ModelForm):
 class BlogPostForm(forms.ModelForm):
     class Meta:
         model = BlogPost
-        fields = ['heading', 'user_name', 'content','post_number']
+        fields = ['heading', 'user_name', 'content','post_number','image']
 
 
 

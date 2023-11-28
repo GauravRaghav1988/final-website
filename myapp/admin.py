@@ -26,9 +26,19 @@ admin.site.register(QuesModel, QuesModelAdmin)
 
 
 
+# class BlogPostAdmin(admin.ModelAdmin):
+#     list_display = ('post_number', 'heading', 'user_name','content')
+#     search_fields = ('heading', 'user_name')
+#     list_filter = ('user_name',)
+
+
 class BlogPostAdmin(admin.ModelAdmin):
-    list_display = ('post_number', 'heading', 'user_name')
-    search_fields = ('heading', 'user_name')
-    list_filter = ('user_name',)
+    list_display = ('post_number', 'heading', 'user_name', 'display_image', 'content')
+    search_fields = ('heading', 'user_name', 'content')
+
+    def display_image(self, obj):
+        return obj.image.url if obj.image else ''
+
+    display_image.short_description = 'Image'
 
 admin.site.register(BlogPost, BlogPostAdmin)

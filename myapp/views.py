@@ -175,20 +175,26 @@ def logoutPage(request):
 
 
 
-def post_list(request):
-    posts = BlogPost.objects.all()
-    return render(request, 'post_list.html', {'posts': posts})
+# def post_list(request):
+#     posts = BlogPost.objects.all()
+#     return render(request, 'post_list.html', {'posts': posts})
 
-def post_detail(request, post_number):
-    post = get_object_or_404(BlogPost, post_number=post_number)
-    return render(request, 'post_detail.html', {'post': post})
+# def post_detail(request, post_number):
+#     post = get_object_or_404(BlogPost, post_number=post_number)
+#     return render(request, 'post_detail.html', {'post': post})
 
-def create_post(request):
-    if request.method == 'POST':
-        form = BlogPostForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('post_list')
-    else:
-        form = BlogPostForm()
-    return render(request, 'create_post.html', {'form': form})
+# def create_post(request):
+#     if request.method == 'POST':
+#         form = BlogPostForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('post_list')
+#     else:
+#         form = BlogPostForm()
+#     return render(request, 'create_post.html', {'form': form})
+
+
+
+def blog_list(request):
+    blog_posts = BlogPost.objects.all()
+    return render(request, 'blog_list.html', {'blog_posts': blog_posts})

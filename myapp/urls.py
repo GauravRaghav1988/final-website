@@ -4,7 +4,7 @@ from .import views
 # from myapp.views import *
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import post_list, post_detail, create_post
+from .views import *
 
 urlpatterns = [
     path('',views.home),
@@ -15,9 +15,9 @@ urlpatterns = [
     path('logout/',views.logoutuser),   
     path('quiz/',views.quiz_home,name='quiz_home'),
     path('add_question/',views.addQuestion,name='addQuestion'),
-    path('showpost', post_list, name='post_list'),
-    path('post/<int:post_number>/', post_detail, name='post_detail'),
-    path('create/', create_post, name='create_post'),
+    # path('showpost', post_list, name='post_list'),
+    # path('post/<int:post_number>/', post_detail, name='post_detail'),
+    path('watch/',views.blog_list , name='blog_list'),
  
 ]
 

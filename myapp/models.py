@@ -16,12 +16,26 @@ class QuesModel(models.Model):
 
 
 
+
+# class BlogPost(models.Model):
+#     heading = models.CharField(max_length=255)
+#     post_number = models.AutoField(primary_key=True)
+#     user_name = models.CharField(max_length=255, default="Gaurav Raghav")
+#     image = models.ImageField(upload_to='post_images/', blank=True, null=True)
+#     content = models.TextField()
+
+#     def __str__(self):
+#         return f'{self.post_number}: {self.heading} by {self.user_name}'
+
+
 class BlogPost(models.Model):
     heading = models.CharField(max_length=255)
     post_number = models.AutoField(primary_key=True)
     user_name = models.CharField(max_length=255, default="Gaurav Raghav")
+    image = models.ImageField(upload_to='post_images/', blank=True, null=True)
     content = models.TextField()
-
 
     def __str__(self):
         return f'{self.post_number}: {self.heading} by {self.user_name}'
+
+
