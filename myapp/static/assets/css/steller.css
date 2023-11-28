@@ -2058,12 +2058,12 @@ pre code {
 }
 
 .table-hover .table-active:hover {
-  background-color: rgba(0, 0, 0, 0.075);
+  background-color: rgba(212, 13, 13, 0.075);
 }
 
 .table-hover .table-active:hover > td,
 .table-hover .table-active:hover > th {
-  background-color: rgba(0, 0, 0, 0.075);
+  background-color: rgba(176, 22, 22, 0.075);
 }
 
 .table .thead-dark th {
@@ -4470,7 +4470,7 @@ input[type="button"].btn-block {
 }
 
 .nav-link:hover, .nav-link:focus {
-  text-decoration: none;
+  text-decoration:solid;
 }
 
 .nav-link.disabled {
@@ -11035,8 +11035,8 @@ pre {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 2px solid #000;
-  color: blue;
+  border: 1px solid orange;
+  color: white;
   text-align: center;
   line-height: 40px;
   -webkit-transition: all 0.3s;
