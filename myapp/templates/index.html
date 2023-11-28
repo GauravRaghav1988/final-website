@@ -1,0 +1,574 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+      
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Steller landing page.">
+    <meta name="author" content="Devcrud">
+    <title>GAURAV RAGHAV</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="{% static 'assets/vendors/themify-icons/css/themify-icons.css' %}">
+    <!-- Bootstrap + Steller main styles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Blogs</title>
+    <link rel="icon" href="{% static 'assets/imgs/newlogo.png' %}" type="image/x-icon">
+    
+	<link rel="stylesheet" href=" {% static 'assets/css/steller.css ' %}">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <!-- Page navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
+        <div class="container">
+
+          
+    
+
+           <a class="navbar-brand" href="/"><img src="{% static 'assets/imgs/newlogo.png' %}" alt=""></a> 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto align-items-center">
+               
+        {% if user.is_authenticated %} 
+        
+        <li class="nav-item"><a href='/account/'
+            class="- btn btn-primary rounded ml-4"><span>username : {{request.user.username | upper}} </span></a></li>
+          
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">Service</a>
+                    </li> 
+                    <li class="nav-item">
+                      <a class="nav-link" href="#Skills">Skills</a>
+                  </li>  
+                  
+                    
+                   {% comment %} <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>  {% endcomment %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testmonial">Education</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                     
+                    {% comment %} <li class="nav-item">
+                        <a class="nav-link" href="/login/">Login</a>
+                    </li> {% endcomment %}
+                    {% comment %} <li class="nav-item">
+                        <a class="nav-link" href="/registration/">Registration</a>
+                    </li> {% endcomment %}
+                    
+                    {% comment %} <li class="nav-item">
+                        <a class="nav-link" href="/account/">Your Account</a>
+                    </li> {% endcomment %}
+                     
+
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/quiz/"><strong>Play Quiz</strong></a>
+                    </li>
+                  
+
+                            
+                    <li class="nav-item" style="background-color:cyan;font-family:'Times New Roman', Times, serif;">
+                        <a class="nav-link" href="/logout/"><strong>Logout</strong></a>
+                    </li>
+                       
+
+
+                     
+
+
+
+                        {% comment %} <li class="nav-item">
+                            <a class="nav-link" href=""><div id="countdown"></div></a>
+                        </li>  {% endcomment %}
+
+                      
+                    
+                          {% comment %} {{ redirect_to_login_immediately }} {% endcomment %}
+
+        {%else%}
+        <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+        </li>
+        {% comment %} <li class="nav-item">
+            <a class="nav-link" href="#service">Service</a>
+        </li>        {% endcomment %}
+        {% comment %} <li class="nav-item">
+          <a class="nav-link" href="#Skills">Skills</a>
+      </li>             {% endcomment %}
+        {% comment %} <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+        </li> {% endcomment %}
+        <li class="nav-item">
+            <a class="nav-link" href="#testmonial">Education & Certification</a>
+        </li>
+        {% comment %} <li class="nav-item">
+            <a class="nav-link" href="/login/">Login</a>
+        </li> {% endcomment %}
+        
+      
+        <li class="nav-item">
+            <a class="nav-link" href="/registration/">Registration</a>
+        </li>
+        {% comment %} <li class="nav-item">
+            <a class="nav-link" href="/">Logout</a>
+        </li> {% endcomment %}
+      
+      
+
+        <li class="nav-item" style="background-color:cornflowerblue; font-weight: bold; ">
+            <a class="nav-link" href="/quiz/"><strong>Play Quiz</strong></a>
+        </li>
+        <li class="nav-item"><a href='/login/'
+            class="- btn btn-primary rounded ml-4" style="background-color: black; border-width:thick;"><span><strong>Login Required !</strong></span></a></li>
+      
+     
+           
+      {% endif %}           
+
+                          
+                    </li> 
+                </ul>
+            </div>
+        </div>          
+    </nav>
+    <!-- End of page navibation -->
+
+    <!-- Page Header -->
+    <header class="header" style ="background-color:#557677;" ,id="home"> 
+        <div class="container">
+            <div class="infos">
+                <h6 class="subtitle" style="color: white ; font:bold; font-size:xx-large;">Hello,I'm</h6>
+                <h6 class="title" style="color: darkblue;">GAURAV RAGHAV</h6>
+                {% comment %} <p class="new" >Software Professional</p>  {% endcomment %}
+                
+                <div class="buttons pt-3">
+                  {% comment %} <button class="btn btn-primary rounded" href='/login/'>Login</button> {% endcomment %}
+                  {% if user.is_authenticated %} 
+                <br>
+            <br>
+                {% comment %} <p>Welcome</p> {% endcomment %}
+                  <h6 class="subtitle" style="font-size: 38px; color: black; font-family: cursive; font-weight: bold; text-align: left;"> Welcome Dear {{request.user.username | title}} ! </h6>
+
+
+                        {% comment %} <h6 class="subtitle">Ohh Welcome</h6>
+                        <h6 class="title">Dear  {{request.user.username | upper}}</h6> {% endcomment %}
+                        {% comment %} <p class="new">Software Professional</p>  {% endcomment %}
+                    
+                  {% else %}
+                  <a class="btn btn-primary rounded" style="color: white; background-color:blue;"  href='/login/'>Login</a>
+                  <a href='/registration/' class="btn btn-dark rounded">Register Here</a>
+                    {%endif%}
+
+                    {% for message in messages %}
+                      <div class="message {{ message.tags }}" style="color:gold; font-weight: 900; font-size:large">
+                         {{ message }}
+                      </div>
+                     {% endfor %}
+                    {% comment %} <button class="btn btn-dark rounded">Register Here</button> {% endcomment %}
+                </div>     
+               
+             <br>
+                <div class="socials mt-4">
+                    {% comment %} <a class="social-item" href="{% static 'javascript:void(0)' %}"><i class="ti-facebook"></i></a> {% endcomment %}
+                    {% comment %} <a class="social-item" href="{% static 'javascript:void(0)' %}"><i class="ti-google"></i></a> {% endcomment %}
+                    <a class="social-item" href="{% static 'javascript:void(0)' %}"><i class="ti-github"></i></a>
+                    <a class="social-item" href="https://linkedin.com/in/contactgauravraghav"><i class="ti-linkedin"></i></a>
+                </div>
+                {% comment %} "https://exampleURL.com/" {% endcomment %}
+            </div>              
+            <div class="img-holder" style="height: auto; width: 100%;">
+                <img src="{% static 'assets/imgs/bg_1.png' %}" alt="">
+            </div>      
+        </div>  
+
+        <!-- Header-widget -->
+        <div class="widget">
+            <div class="widget-item">
+                <h2>PROFESSIONAL WITH 8 YEARS OF EXPERIENCE</h2>
+                <p>SALE & MARKETING, DIGITAL MARKETING, WEB DEVELOPEMENT, CLOUD SERVICES & DEVOPS</p>
+        </div>
+
+        
+    </header>
+    <!-- End of Page Header -->
+    
+    <!-- About section -->
+    <section id="about" class="section mt-2" style="background-color:black " >
+        <div class="container mt-5">
+            <div class="row text-center text-md-left">
+                <div class="col-md-3">
+                    <img src="{% static 'assets/imgs/2.jpg' %}" alt="" class="img-thumbnail mb-4">
+                </div>
+                <div class="pl-md-4 col-md-9">
+      
+                    {% comment %} <h4 class="title">Gaurav Raghav</h4> {% endcomment %}
+                    <h2 class="subtitle">Software Professional</h2>
+                    <br>
+                    <p class="new">My seven years of professional experience cover a wide range of areas, including DevOps, web development, data engineering, and data visualization. Having worked with Python for three years, I am an expert in frameworks such as Flask and Django, creating reliable online applications that meet corporate requirements. Skilled with databases, AWS, and data technologies like as Power BI, I design dashboards in real time to help make educated decisions.Having a reputation for excellent communication and teamwork, I support reaching objectives as a group. I'm dedicated to expanding, therefore I keep up with market developments and provide innovative solutions. I thrive in deployment and infrastructure management, having worked in DevOps for a year.Eager to explore joint ventures, let's talk about how we can both contribute to success.</p>
+                    {% comment %} <button class="btn btn-primary rounded mt-3">DOWNLOAD CV</button>      {% endcomment %}
+                    <a href="path_to_your_pdf_file.pdf" download="GAURAV RAGHAV PYTHON DEVELOPER RESUME.pdf">
+                        <button class="btn btn-primary rounded mt-3">DOWNLOAD CV</button>
+                      </a>
+                                    
+                </div>
+            </div>
+        </div>
+    </section>
+    {% if user.is_authenticated %} 
+    
+    <!-- Service section -->
+    <section id="service" class="section">
+        <div class="container text-center">
+            <h1 class="subtitle">Service</h1>
+            <br>
+            {% comment %} <h6 class="section-title mb-4">Service Entails following</h6> {% endcomment %}
+            {% comment %} <p class="mb-5 pb-4">Python | Power Query | Power BI | MICROSOFT (Power Apps, Power Automate) | Dev Ops (Docker, Jenkins, Terraform, Kubernetes, Ansible) |Django | Data Cleaning | Data Transformation| Dashboard |Django REST API | Project management (JIRA) | AWS Beanstalk | AWS LAMBDA |Docker | CSS | Microsoft Office | Postman | HTML5 | MySQL| Web Development | Share Point List | Bootstrap | MS Excel |AWS Cloud Services | Flask | Py Sparks | Data Bricks | RDBMS | (PostgreSQL) | My SQL | Git Hub | Microsoft 365 | Excel. </p> {% endcomment %}
+
+            <div class="row">
+                <div class="col-sm-6 col-md-3 mb-4">
+                    <div class="custom-card card border">
+                        <div class="card-body">
+                            <i class="icon ti-world"></i>
+                            <h5>Web Development</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 mb-4">
+                    <div class="custom-card card border">
+                        <div class="card-body">
+                            <i class="icon ti-thought"></i>
+                            <h5>Cloud</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 mb-4">
+                    <div class="custom-card card border">
+                        <div class="card-body">
+                            <i class="icon ti-infinite"></i>
+                            <h5>DEV OPS</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 mb-4">
+                    <div class="custom-card card border">
+                        <div class="card-body">
+                            <i class="icon ti-server"></i>
+                            <h5>Data Analyst</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Sectoin -->
+ 
+  
+      <!-- Skills section -->
+      <section id="Skills" class="section">
+        <div class="container text-center">
+            <h6 class="subtitle">Skills</h6>
+            {% comment %} <h6 class="section-title mb-4">What Skills Do I have?</h6> {% endcomment %}
+            {% comment %} <p class="mb-5 pb-4">Over 8 Years of overall experiences helped me to gain expertise in the following Domains</p> {% endcomment %}
+            <br>
+            <br>
+            
+
+            <div class="row text-left">
+                <div class="col-sm-6">
+                    <h6 class="mb-3">Web Development-Python Language | Django | Data Engineering</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 89%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>89%</span></div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <h6 class="mb-3"> Data Analyst -Power BI | MICROSOFT (Power Apps,Automate)| Databses </h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 89%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>89%</span></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h6 class="mb-3">Dev Ops (Docker, Jenkins, Terraform, Kubernetes, Ansible,Etc) </h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 83%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>83%</span></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h6 class="mb-3">Cloud Services- AWS, EC2, S3, Elastic bean stalk, Lambda,Etc</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 95%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>95%</span></div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+      </section>
+    <!-- End of Skills sections -->
+
+    <!-- Portfolio section -->
+       <section id="portfolio" class="section">
+        <div class="container text-center">
+            <h6 class="subtitle">Portfolio</h6>
+            <br>
+            <br>
+            {% comment %} <h6 class="section-title mb-4">Some Images of my work</h6> {% endcomment %}
+            {% comment %} <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p> {% endcomment %}
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="img-wrapper">
+                        <img src="https://source.unsplash.com/random/?restaurant" alt="">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Restaurants Website</h5>
+                                <a href="{% static 'javascript:void(0)' %}"><i class="ti-zoom-in"></i></a>
+                                <a href="{% static 'javascript:void(0)' %}"><i class="ti-link"></i></a>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="https://source.unsplash.com/random/?report" alt="">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Power Bi Dashboard</h5>
+                                {% comment %} <a href="{% static 'javascript:void(0)' %}"><i class="ti-zoom-in"></i></a>
+                                <a href="{% static 'javascript:void(0)' %}"><i class="ti-link"></i></a> {% endcomment %}
+                            </div>                              
+                        </div>
+                    </div>                  
+                </div>
+                <div class="col-sm-4">
+                    <div class="img-wrapper">
+                        <img src="https://source.unsplash.com/random/?Ecommerce website/" alt="">
+
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>E-Commerce Website</h5>
+                                {% comment %} <a href="{% static 'javascript:void(0)' %}"><i class="ti-zoom-in"></i></a>
+                                <a href="{% static 'javascript:void(0)' %}"><i class="ti-link"></i></a> {% endcomment %}
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="https://source.unsplash.com/random/?digital marketing" alt="">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Digital Marketing</h5>
+                                {% comment %} <a href="{% static 'javascript:void(0)' %}"><i class="ti-zoom-in"></i></a> {% endcomment %}
+                                {% comment %} <a href="{% static 'javascript:void(0)' %}"><i class="ti-link"></i></a> {% endcomment %}
+                            </div>                              
+                        </div>
+                    </div>                  
+                </div>
+                <div class="col-sm-4">
+                    <div class="img-wrapper">
+                        <img src="https://source.unsplash.com/random/?data/" alt="">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Data Engineering Project</h5>
+                                {% comment %} <a href="{% static 'javascript:void(0)' %}"><i class="ti-zoom-in"></i></a>
+                                <a href="{% static 'javascript:void(0)' %}"><i class="ti-link"></i></a> {% endcomment %}
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="https://source.unsplash.com/random/?web scraping/" alt="">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Web Scarping</h5>
+                                {% comment %} <a href="{% static 'javascript:void(0)' %}"><i class="ti-zoom-in"></i></a>
+                                <a href="{% static 'javascript:void(0)' %}"><i class="ti-link"></i></a> {% endcomment %}
+                            </div>                              
+                        </div>
+                    </div>                  
+                </div>
+            </div>
+
+        </div>
+       </section>
+    <!-- End of portfolio section -->
+    {% endif%}
+    <!-- Testmonial Section -->
+        <section id="testmonial" class="section">
+        <div class="container text-center">
+            <h6 class="subtitle">Certification & Education </h6>
+            <br>
+            {% comment %} <h6 class="section-title mb-4">What People Say About Me</h6> {% endcomment %}
+            {% comment %} <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p> {% endcomment %}
+
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators" style="background-color: black;">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card testmonial-card border">
+                            <div class="card-body" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bolder;">
+                                <img src="{% static 'assets/imgs/eng.png ' %}" alt="">
+                                <p>Bachelor of Engineering</p>
+                                <h1 class="title">Mechancial</h1>
+                                <h1 class="subtitle">From JNTU Hyderabad</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card testmonial-card border">
+                            <div class="card-body" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bolder;">
+                                <img src="{% static 'assets/imgs/mba.png ' %}" alt="">
+                                <p>Masters of Business Adminstration</p>
+                                <h1 class="title">Project Mangement</h1>
+                                <h1 class="subtitle">SMUDE</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card testmonial-card border">
+                            <div class="card-body" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bolder;">
+                                <img src="{% static 'assets/imgs/C.png' %}" alt="">
+                                <p>Certification in followings</p>
+                                <h1 class="title">Python, Django, Power Bi, JIRA, Pyspark </h1>
+                                <h1 class="subtitle"></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         </section>
+    
+    <!-- End of testmonial section -->
+   
+    <!-- Blog Section -->
+    <section id="blog" class="section">
+        <div class="container text-center">
+            <h6 class="subtitle">My Blogs</h6>
+            <h6 class="section-title mb-4">Find my latest blogs</h6>
+            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
+
+            <div class="row text-left">
+                <div class="col-md-4">
+                    <div class="card border mb-4">
+                        <img src="{% static 'assets/imgs/blog-1.jpg' %}" alt="" class="card-img-top w-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Designe for Everyone</h5>
+                            <div class="post-details">
+                                <a href="{% static 'javascript:void(0)' %}">Posted By: Admin</a>
+                                <a href="{% static 'javascript:void(0)' %}"><i class="ti-thumb-up"></i> 456</a>
+                                <a href="{% static 'javascript:void(0)' %}"><i class="ti-comment"></i> 123</a>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.</p>
+                            <a href="{% static 'javascript:void(0)' %}">Read More..</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border mb-4">
+                        <img src="{% static 'assets/imgs/blog-2.jpg' %}" alt="" class="card-img-top w-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Layouts</h5>
+                            <div class="post-details">
+                                <a href="{% static 'javascript:void(0)' %}">Posted By: Admin</a>
+                                <a href="{% static 'javascript:void(0)' %}"><i class="ti-thumb-up"></i> 456</a>
+                                <a href="{% static 'javascript:void(0)' %}"><i class="ti-comment"></i> 123</a>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.</p>
+                            <a href="{% static 'javascript:void(0)' %}">Read More..</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border mb-4">
+                        <img src="{% static 'assets/imgs/blog-3.jpg' %}" alt="" class="card-img-top w-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Bootstrap Framework</h5>
+                            <div class="post-details">
+                                <a href="{% static 'javascript:void(0)' %}">Posted By: Admin</a>
+                                <a href="{% static 'javascript:void(0)' %}"><i class="ti-thumb-up"></i> 456</a>
+                                <a href="{% static 'javascript:void(0)' %}"><i class="ti-comment"></i> 123</a>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.</p>
+                            <a href="{% static 'javascript:void(0)' %}">Read More..</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <!-- Hire me section -->
+    {% comment %} <section class="bg-gray p-0 section">
+        <div class="container">
+            <div class="card bg-primary">
+                <div class="card-body text-light">
+                    <div class="row align-items-center">
+                        <div class="col-sm-9 text-center text-sm-left">
+                            <h5 class="mt-3">Hire Me For Your Project</h5>
+                            <p class="mb-3">Want to connect?</p>  </div>
+                        <div class="col-sm-3 text-center text-sm-right">
+                            <a href="https://linkedin.com/in/contactgauravraghav" target="_blank" class="btn btn-light rounded">Hire Me!</a>
+                        </div>
+                        
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>       {% endcomment %}
+    <!-- End od Hire me section. -->
+
+
+    
+ <!-- Page Footer -->
+    <footer class="page-footer" style="background-color: black;>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-sm-6" style="font-weight: bold;">
+                    <p>Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="" target="_blank">GAURAV RAGHAV</a></p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="socials">
+                        <a class="social-item" href="{% static 'javascript:void(0)' %}"><i class="ti-facebook"></i></a>
+                        <a class="social-item" href="{% static 'javascript:void(0)' %}"><i class="ti-google"></i></a>
+                        <a class="social-item" href="{% static 'javascript:void(0)' %}"><i class="ti-github"></i></a>
+                        <a class="social-item" href="{% static 'javascript:void(0)' %}"><i class="ti-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>  
+    <!-- End of page footer -->
+	
+	<!-- core  -->
+    <script src="{% static 'assets/vendors/jquery/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'assets/vendors/bootstrap/bootstrap.bundle.js' %}"></script>
+    <!-- bootstrap 3 affix -->
+	<script src="{% static 'assets/vendors/bootstrap/bootstrap.affix.js' %}"></script>
+
+    <!-- steller js -->
+    <script src="{% static 'assets/js/steller.js' %}"></script>
+    {% comment %} <script src="script.js"></script> {% endcomment %}
+</body>
+</html>

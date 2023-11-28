@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Only Page</title>
+    <style>
+        @font-face {
+            font-family: 'CustomFont1';
+            src: url('path/to/custom-font1.woff2') format('woff2'),
+                 url('path/to/custom-font1.woff') format('woff');
+        }
+
+        @font-face {
+            font-family: 'CustomFont2';
+            src: url('path/to/custom-font2.woff2') format('woff2'),
+                 url('path/to/custom-font2.woff') format('woff');
+        }
+
+        body {
+            display: flex;
+            border-color: black;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font: bold;
+            background-color: #f0f8ff;
+            font-family: 'CustomFont1', sans-serif;
+        }
+
+        .jumbotron {
+            background-color: #fff;
+            padding: 20px;
+            border-color: black;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+            font-family: 'CustomFont2', sans-serif;
+        }
+
+        .card {
+            border:black;
+            box-shadow: none;
+
+        }
+
+        .card-body {
+            padding: 0;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            font:bold;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 20px;
+            font-family: 'Open Sans', sans-serif; /* Google Font */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto&display=swap">
+</head>
+
+<body>
+
+    <div class="jumbotron container row">
+        <div class="col-md-6">
+            <h1>Add Question</h1>
+            <div class="card card-body">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    
+                    <br>
+                    <input type="submit" name="Submit">
+                    <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ">Please put either Op1,Op2,Op3 or Op4 as your right answer in Ans column</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+<!-- templates/blog/post_detail.html -->
+
+
+{% block content %}
+  <h2>{{ post.heading }}</h2>
+  <p>Post Number: {{ post.post_number }}</p>
+  <p>Author: {{ post.user_name }}</p>
+  <p>{{ post.content }}</p>
+  <a href="{% url 'post_list' %}">Back to post list</a>
+{% endblock %}

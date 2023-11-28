@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Steller landing page.">
+    <meta name="author" content="Devcrud">
+    <title>GAURAV RAGHAV</title>
+    
+    <!-- font icons -->
+    <link rel="stylesheet" href="{% static 'assets/vendors/themify-icons/css/themify-icons.css' %}">
+    <!-- Bootstrap + Steller main styles -->
+    
+	<link rel="stylesheet" href=" {% static 'assets/css/steller.css ' %}">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <!-- Page navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
+        <div class="container">
+           <a class="navbar-brand" href="/"><img src="{% static 'assets/imgs/newlogo.png' %}" alt=""></a> 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"><strong>Home</strong></a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">Service</a>
+                    </li>        
+                   <li class="nav-item">
+                      <a class="nav-link" href="#Skills">Skills</a>
+                  </li>             
+                    {% comment %} <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li> {% endcomment %}
+                    {% comment %} <li class="nav-item">
+                        <a class="nav-link" href="#testmonial">Education & Certification</a>
+                    </li> {% endcomment %}
+                  
+                    <li class="nav-item">
+                        <a class="nav-link" href="/registration/">Registration</a>
+                    </li>
+
+
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/quiz/"><strong>Play Quiz</strong></a>
+                    </li>
+
+                    {% comment %} <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li> {% endcomment %}
+                    {% comment %} <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li> {% endcomment %}
+                    {% comment %} <li class="nav-item">
+                        <a class="- btn btn-primary rounded ml-4" href='{{user.first_name | upper}}'> {{user.first_name | upper}} </a> {% endcomment %}
+
+                        {% if user.is_authenticated %}
+                        <li class="nav-item"><a href='/account/'
+                            class="- btn btn-primary rounded ml-4"><span>Hello : {{request.user.username | upper}} </span></a></li>
+{% else %}
+                        <li class="nav-item"><a href='/login/'
+                         class="- btn btn-primary rounded ml-4"><span>Login For Full Access ! </span></a></li>
+
+                         {%endif%}
+                                    
+                            
+                    </li> 
+                </ul>
+            </div>
+        </div>          
+    </nav>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .h1 {
+
+         margin-right: auto;
+
+        }
+
+  
+        .card {
+            width: 32rem;
+            margin: 20px auto;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .card-text {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        h5 {
+            font-size: 18px;
+            color: #007bff;
+        }
+
+        .username {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #fff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    
+   
+        <div class="card-columns">
+            <div class="card">
+                <img class="card-img-top"
+                    src="{% static 'assets/imgs/result.png' %}"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Score: {{score}}</h5>
+                    <p class="card-text">Percentage: {{percent}}%</p>
+                    <p class="card-text">Time Taken: {{time}} seconds</p>
+                    <p class="card-text">Correct answers: {{correct}}</p>
+                    <p class="card-text">Incorrect answers: {{wrong}}</p>
+                    <p class="card-text">Total questions: {{total}}</p>
+                    
+                    <h5>All the best for next quiz!</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+

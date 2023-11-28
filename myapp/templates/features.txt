@@ -1,0 +1,9 @@
+login user details fetched from backend using forms.py
+registration fetched into backend using forms.py
+user logout after 30 minites using (django-session-timeout)
+user logout whnen idle for 5 minutes
+Download resume feature
+limited acces based on the loged in user and non signed user.is_authenticated
+Added quiz to play and choose 1 option  out of 4. later after submission result will be shown.
+also timer added to check how fast you were in giving the answers
+and only admin create a question.

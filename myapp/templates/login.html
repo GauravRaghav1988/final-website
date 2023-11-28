@@ -1,0 +1,190 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Steller landing page.">
+    <meta name="author" content="Devcrud">
+    <title>GAURAV RAGHAV</title>
+    
+    <!-- font icons -->
+    <link rel="stylesheet" href="{% static 'assets/vendors/themify-icons/css/themify-icons.css' %}">
+    <!-- Bootstrap + Steller main styles -->
+    
+	<link rel="stylesheet" href=" {% static 'assets/css/steller.css ' %}">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <!-- Page navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
+        <div class="container">
+           <a class="navbar-brand" href="/"><img src="{% static 'assets/imgs/newlogo.png' %}" alt=""></a> 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"><strong>Home</strong></a>
+                    </li>
+               {% comment %} <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a> 
+                   </li> {% endcomment %}
+                    {% comment %} <li class="nav-item">
+                        <a class="nav-link" href="#service">Service</a>
+                    </li>         {% endcomment %}
+                    {% comment %} <li class="nav-item">
+                      <a class="nav-link" href="#Skills">Skills</a>
+                  </li>             {% endcomment %}
+                    {% comment %} <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li> {% endcomment %}
+                    {% comment %} <li class="nav-item">
+                        <a class="nav-link" href="#testmonial">Education & Certification</a>
+                    </li> {% endcomment %}
+                  
+                    <li class="nav-item">
+                        <a class="nav-link" href="/registration/">Registration</a>
+                    </li>
+                    {% comment %} <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li> {% endcomment %}
+                    {% comment %} <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li> {% endcomment %}
+                    {% comment %} <li class="nav-item">
+                        <a class="- btn btn-primary rounded ml-4" href='{{user.first_name | upper}}'> {{user.first_name | upper}} </a> {% endcomment %}
+                        <li class="nav-item"><a href='/login/'
+                         class="- btn btn-primary rounded ml-4" style="background-color: black; border-width: thick;"><span>Login For Full Access ! </span></a></li>
+             
+                          
+                    </li> 
+                </ul>
+            </div>
+        </div>          
+    </nav>
+    <!-- End of page navibation -->
+
+ 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% if user.is_authenticated %}
+<h1>Already Logged in !</h1>
+<br>
+<h2>Your are registered as :{{request.user.username | upper}}</h2>
+{% else %}
+
+<section class="bg-gray p-0 section" style="background-color:cadetblue ; height: max-content;" >
+ <div class="container" style="background-color: cadetblue;">
+     <div class="card bg-primary" style="background-color: cadetblue;">
+         <div class="card-body text-light" style="background-color: cadetblue;">
+             <div class="row align-items-center" style="background-color: cadetblue;">
+                 <div class="col-sm-9 text-center text-sm-center" style="background-color: cadetblue;font-size: large;font-weight: bold;font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                  <form action="" method="post" novalidate>
+                   {% csrf_token %}
+                  {% if form.non_field_errors %}
+                  {% for error in form.non_field_errors %}
+                  <p class="er">{{error}}</p>
+                  {% endfor %}
+                  {% endif %}
+                  {% for fm in form %}
+                  {{fm.label_tag}} {{fm}} {{fm.errors|striptags}} <br><br>
+                  {% endfor %}
+                  <input type="submit" value="Login" style="font-weight: bold;">
+                  
+                  </form>
+                  <br>
+                  <br>
+                  <br> 
+             </div>
+         </div>
+         <h6 style="background-color:chocolate; font-family: cursive; font-weight: 900;">Don't have account yet? Don't worry you can Register above</h6>
+
+         {% endif %} 
+         <br>
+         
+         
+         {% if user.is_authenticated %}
+         <h5><a href='/account/'
+         class="nav-link"><span>Click to Account Page</span></a></h5>
+         <h5>OR</h5>
+         <h5><a href='/logout/'
+         class="nav-link"><span>Logout</span></a></h5>
+         {% endif %} 
+         
+     </div>
+ </div>
+</section>   
+ 
+
+ <!-- Page Footer -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-sm-6">
+                    <p>Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com" target="_blank">GAURAV RAGHAV</a></p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="socials">
+                        <a class="social-item" href="{% static 'javascript:void(0)' %}"><i class="ti-facebook"></i></a>
+                        <a class="social-item" href="{% static 'javascript:void(0)' %}"><i class="ti-google"></i></a>
+                        <a class="social-item" href="{% static 'javascript:void(0)' %}"><i class="ti-github"></i></a>
+                        <a class="social-item" href="{% static 'javascript:void(0)' %}"><i class="ti-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>  
+    <!-- End of page footer -->
+	
+	<!-- core  -->
+    <script src="{% static 'assets/vendors/jquery/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'assets/vendors/bootstrap/bootstrap.bundle.js' %}"></script>
+    <!-- bootstrap 3 affix -->
+	<script src="{% static 'assets/vendors/bootstrap/bootstrap.affix.js' %}"></script>
+
+    <!-- steller js -->
+    <script src="{% static 'assets/js/steller.js' %}"></script>
+
+
+     {% comment %} timer {% endcomment %}
+    
+     
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
