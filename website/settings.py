@@ -138,4 +138,4 @@ import os
 # for adding images in blogs
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/imgs')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
