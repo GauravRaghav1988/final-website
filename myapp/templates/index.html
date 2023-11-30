@@ -2,7 +2,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
+     <!-- Add these lines to the head of your HTML document -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
       
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -235,6 +242,10 @@
             </div>
         </div>
     </section>
+
+                    
+       
+    </section>
     {% if user.is_authenticated %} 
     
     <!-- Service section -->
@@ -461,6 +472,10 @@
     
     <!-- End of testmonial section -->
     {% if user.is_authenticated %} 
+
+
+  
+    
     <!-- Blog Section -->
     <section id="blog" class="section">
         <div class="container text-center">
@@ -517,9 +532,9 @@
             </div>
         </div>
     </section> 
-    {% endif%}
+   
     <!-- Hire me section -->
-    {% comment %} <section class="bg-gray p-0 section">
+ <section class="bg-gray p-80 section">
         <div class="container">
             <div class="card bg-primary">
                 <div class="card-body text-light">
@@ -536,11 +551,21 @@
                 </div> 
             </div>
         </div>
-    </section>       {% endcomment %}
+    </section>      
     <!-- End od Hire me section. -->
 
 
+    {% endif%}
+
     
+   
+
+
+
+
+
+
+
  <!-- Page Footer -->
     <footer class="page-footer" style="background-color: black;>
         <div class="container">

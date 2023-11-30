@@ -33,7 +33,7 @@ admin.site.register(QuesModel, QuesModelAdmin)
 
 
 class BlogPostAdmin(admin.ModelAdmin):
-    list_display = ('post_number', 'heading', 'user_name', 'display_image', 'content')
+    list_display = ('post_number', 'heading', 'user_name', 'display_image', 'content','created_at')
     search_fields = ('heading', 'user_name', 'content')
 
     def display_image(self, obj):

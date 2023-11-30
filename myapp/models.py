@@ -1,5 +1,5 @@
 from django.db import models
- 
+from django.utils import timezone
 # Create your models here.
 class QuesModel(models.Model):
     question = models.CharField(max_length=200,null=True)
@@ -34,8 +34,9 @@ class BlogPost(models.Model):
     user_name = models.CharField(max_length=255, default="Gaurav Raghav")
     image = models.ImageField(upload_to='post_images/', blank=True, null=True)
     content = models.TextField()
+    created_at = models.DateField(default=timezone.now)
 
     def __str__(self):
-        return f'{self.post_number}: {self.heading} by {self.user_name}'
+        return f'{self.post_number}: {self.heading} by {self.user_name} create at {self.created_at}'
 
 

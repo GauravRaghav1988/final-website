@@ -6,20 +6,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/vendors/themify-icons/css/themify-icons.css' %}">
+    {% comment %} <link rel="icon" href="{% static 'assets/imgs/newlogo.png' %}" type="image/x-icon"> {% endcomment %}
+    <link rel="stylesheet" href=" {% static 'assets/css/steller.css ' %}">
     <title>Blog List</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            display: flex;
+            background-color:black;
+            color: white;
         }
 
         h1 {
-            color: #333;
+            color:white;
+            margin: 20px;
+            display: flex;
+            font-weight: bolder;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         ul {
             list-style-type: none;
             padding: 0;
+            color: white;
         }
 
         li {
@@ -27,6 +39,9 @@
             border-radius: 5px;
             margin-bottom: 20px;
             padding: 15px;
+            display: block;
+            background-color:black;
+            color: white;
         }
 
         img {
@@ -37,26 +52,31 @@
         }
 
         p {
-            color: #555;
+            color:blueviolet;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Blog List</h1>
+    <div class="container" style="font">
+        <h1 >Blog List</h1>
+        {% csrf_token %} 
         <ul>
             {% for post in blog_posts %}
                 <li>
-                    <h2>{{ post.heading }}</h2>
+                    <h2 style="color: white; font:bold; color:orange;">{{ post.heading | title }}</h2>
+                    <h2 style="color: white; font:100;background-color: cornflowerblue; ">{{ post.user_name | upper }}</h2>
+                    <p style="color: white; font:bold; background-color: coral;">Created On:-{{ post.created_at }}</p>
                     <div class="img">
-                    {% if post.image %}
-                    
-                      <img src="{% static post.image.url }}" alt="{{ post.heading }}">
+                        <div class="img">
+                            {% if post.image %}
+                                <img src="{% static 'post.image.url' %}" alt="{{ post.heading }}">
+                            {% endif %}
+                        </div>
                         
-                    {% endif %}
-                    <div>
-                    <p>{{ post.content }}</p>
-                </li>
+                    {% comment %} <div> {% endcomment %}
+                     <p style="color: white; font:700">{{ post.content }}</p>
+                    
+                </li> 
             {% endfor %}
         </ul>
     </div>
