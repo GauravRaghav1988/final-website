@@ -69,7 +69,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#blog">Blog</a>
+                        <a class="nav-link" href="/blog/">Blog</a>
                     </li>
                      
                     {% comment %} <li class="nav-item">
@@ -117,12 +117,12 @@
         <li class="nav-item">
             <a class="nav-link" href="#about">About</a>
         </li>
-        {% comment %} <li class="nav-item">
+     <li class="nav-item">
             <a class="nav-link" href="#service">Service</a>
-        </li>        {% endcomment %}
-        {% comment %} <li class="nav-item">
+        </li>        
+        <li class="nav-item">
           <a class="nav-link" href="#Skills">Skills</a>
-      </li>             {% endcomment %}
+      </li>            
         {% comment %} <li class="nav-item">
             <a class="nav-link" href="#portfolio">Portfolio</a>
         </li> {% endcomment %}
@@ -132,6 +132,10 @@
         {% comment %} <li class="nav-item">
             <a class="nav-link" href="/login/">Login</a>
         </li> {% endcomment %}
+
+        <li class="nav-item">
+            <a class="nav-link" href="/blog/">Blog</a>
+        </li>
         
       
         <li class="nav-item">
@@ -219,6 +223,8 @@
         
     </header>
     <!-- End of Page Header -->
+
+
     
     <!-- About section -->
     <section id="about" class="section mt-2" style="background-color:black " >
@@ -477,7 +483,7 @@
   
     
     <!-- Blog Section -->
-    <section id="blog" class="section">
+    {% comment %} <section id="blog" class="section">
         <div class="container text-center">
             <h6 class="subtitle">My Blogs</h6>
             <h6 class="section-title mb-4">Find my latest blogs</h6>
@@ -531,7 +537,7 @@
                 </div>
             </div>
         </div>
-    </section> 
+    </section>  {% endcomment %}
    
     <!-- Hire me section -->
  <section class="bg-gray p-80 section">

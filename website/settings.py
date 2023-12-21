@@ -38,6 +38,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_auto_logout.middleware.auto_logout',
 ]
 
 ROOT_URLCONF = 'website.urls'
@@ -122,11 +123,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/' 
-
+SESSION_SAVE_EVERY_REQUEST = True
+# SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 from datetime import timedelta
 AUTO_LOGOUT = {
-    'IDLE_TIME': timedelta(seconds=300),
-    'SESSION_TIME': 600,     #in seconds 10 min *60 sec = 600
+    'IDLE_TIME': timedelta(seconds=60),   #5 min is 50*60 = 300 
+    'SESSION_TIME': 60,     #in seconds 10 min *60 sec = 600
     'REDIRECT_TO_LOGIN_IMMEDIATELY': True,
     
     'MESSAGE': 'Your last session has expired.',
@@ -139,3 +141,4 @@ import os
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+

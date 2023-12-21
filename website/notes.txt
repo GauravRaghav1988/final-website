@@ -1,0 +1,5 @@
+admin -superuser
+auto logout 
+idle logout
+user greet after login 
+login , registration, logout

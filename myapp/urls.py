@@ -17,7 +17,7 @@ urlpatterns = [
     path('add_question/',views.addQuestion,name='addQuestion'),
     # path('showpost', post_list, name='post_list'),
     # path('post/<int:post_number>/', post_detail, name='post_detail'),
-    path('watch/',views.blog_list , name='blog_list'),
+    path('blog/',views.blog_list , name='blog_list'),
  
 ]
 
