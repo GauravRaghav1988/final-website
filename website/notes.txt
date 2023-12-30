@@ -1,4 +1,4 @@
-admin -superuser
+admin -superuser pass-job2024
 auto logout 
 idle logout
 user greet after login 

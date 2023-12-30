@@ -117,12 +117,12 @@
         <li class="nav-item">
             <a class="nav-link" href="#about">About</a>
         </li>
-     <li class="nav-item">
+     {% comment %} <li class="nav-item">
             <a class="nav-link" href="#service">Service</a>
         </li>        
         <li class="nav-item">
           <a class="nav-link" href="#Skills">Skills</a>
-      </li>            
+      </li>             {% endcomment %}
         {% comment %} <li class="nav-item">
             <a class="nav-link" href="#portfolio">Portfolio</a>
         </li> {% endcomment %}
@@ -133,10 +133,7 @@
             <a class="nav-link" href="/login/">Login</a>
         </li> {% endcomment %}
 
-        <li class="nav-item">
-            <a class="nav-link" href="/blog/">Blog</a>
-        </li>
-        
+       
       
         <li class="nav-item">
             <a class="nav-link" href="/registration/">Registration</a>
@@ -147,12 +144,15 @@
       
       
 
-        <li class="nav-item" style="background-color:cornflowerblue; font-weight: bold; ">
+        <li class="nav-item" style="background-color:chocolate; font-weight: bold; ">
             <a class="nav-link" href="/quiz/"><strong>Play Quiz</strong></a>
         </li>
         <li class="nav-item"><a href='/login/'
-            class="- btn btn-primary rounded ml-4" style="background-color: black; border-width:thick;"><span><strong>Login Required !</strong></span></a></li>
-      
+            class="- btn btn-primary rounded ml-4" style="background-color: black;"><span><strong>Login Required !</strong></span></a></li>
+         <li class="nav-item">
+            <a class="nav-link" href="/blog/">Blog</a>
+        </li>
+        
      
            
       {% endif %}           
@@ -236,9 +236,9 @@
                 <div class="pl-md-4 col-md-9">
       
                     {% comment %} <h4 class="title">Gaurav Raghav</h4> {% endcomment %}
-                    <h2 class="subtitle">Software Professional</h2>
+                    <h2 class="subtitle" style="font-family:Verdana, Geneva, Tahoma, sans-serif;">Software Professional</h2>
                     <br>
-                    <p class="new">My seven years of professional experience cover a wide range of areas, including DevOps, web development, data engineering, and data visualization. Having worked with Python for three years, I am an expert in frameworks such as Flask and Django, creating reliable online applications that meet corporate requirements. Skilled with databases, AWS, and data technologies like as Power BI, I design dashboards in real time to help make educated decisions.Having a reputation for excellent communication and teamwork, I support reaching objectives as a group. I'm dedicated to expanding, therefore I keep up with market developments and provide innovative solutions. I thrive in deployment and infrastructure management, having worked in DevOps for a year.Eager to explore joint ventures, let's talk about how we can both contribute to success.</p>
+                    <p class="new" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: white; font-size: 20px;">My seven years of professional experience cover a wide range of areas, including DevOps, web development, data engineering, and data visualization. Having worked with Python for three years, I am an expert in frameworks such as Flask and Django, creating reliable online applications that meet corporate requirements. Skilled with databases, AWS, and data technologies like as Power BI, I design dashboards in real time to help make educated decisions.Having a reputation for excellent communication and teamwork, I support reaching objectives as a group. I'm dedicated to expanding, therefore I keep up with market developments and provide innovative solutions. I thrive in deployment and infrastructure management, having worked in DevOps for a year.Eager to explore joint ventures, let's talk about how we can both contribute to success.</p>
                     {% comment %} <button class="btn btn-primary rounded mt-3">DOWNLOAD CV</button>      {% endcomment %}
                     <a href="path_to_your_pdf_file.pdf" download="GAURAV RAGHAV PYTHON DEVELOPER RESUME.pdf">
                         <button class="btn btn-primary rounded mt-3">DOWNLOAD CV</button>
